@@ -34,6 +34,8 @@ All experiments are evaluated with SacreBLEU.
 │   └── processed/  # SentencePiece model + *.pt files
 └── runs/           # checkpoints & logs
 
+**Note:** The `Data/` and `runs/` directories are not included in this repository due to GitHub file size limitations.
+Please refer to the *Data Download* section below for instructions on obtaining the dataset.
 ---
 
 ## Environment
@@ -48,6 +50,22 @@ Recommended environment:
 - tqdm
 
 Install dependencies: pip install torch transformers sentencepiece sacrebleu tqdm
+
+## Data Download (One-click Setup Guidance)
+
+Due to GitHub file size limitations, the dataset and processed files are hosted externally.
+
+Please download the data package from the following link:
+
+- Baidu Netdisk:  
+  https://pan.baidu.com/s/1hIKkgBbT6mdmWUS3cyCwPg  
+  Password: `znbm`
+
+After downloading, extract the contents and place the `Data/` directory into the project root, so that the directory structure becomes:
+
+
+Once the data is placed correctly, all training and evaluation commands in this README can be executed directly.
+
 
 ## Dataset Format
 
@@ -208,7 +226,11 @@ To quickly train and evaluate a trained model, use the corresponding decode scri
 
 ## Notes on Checkpoints and Data
 
-Due to GitHub size limits, trained checkpoints under `runs/` and processed data under `Data/processed/` are not included. All results reported in this README can be reproduced by running the provided training commands.
+Due to GitHub file size limits, trained checkpoints under `runs/` and processed data under `Data/processed/` are not included in this repository.
+
+Datasets are hosted externally and can be downloaded following the instructions in the *Data Download* section above.
+All reported results in this README were obtained using the provided training commands and evaluation scripts.
+
 
 ## Summary
 RNN models benefit from attention and beam search but remain limited at scale.
@@ -216,3 +238,5 @@ RNN models benefit from attention and beam search but remain limited at scale.
 Transformer models are highly sensitive to data size and optimization hyperparameters.
 
 Pretrained T5 fine-tuning provides the strongest performance in this project.
+
+If you encounter any issues reproducing the experiments, please check the directory structure and ensure the dataset is placed correctly.
