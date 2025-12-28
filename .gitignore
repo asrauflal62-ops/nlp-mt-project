@@ -1,0 +1,32 @@
+# ===== Python =====
+__pycache__/
+*.pyc
+
+# ===== Data & artifacts (do NOT upload) =====
+Data/
+*.pt
+*.jsonl
+*.model
+*.vocab
+*.zip
+
+# ===== Training outputs =====
+runs/
+checkpoints/
+logs/
+
+# ===== Evaluation outputs =====
+eval_*/
+pred.txt
+ref.txt
+samples.txt
+
+# ===== System =====
+.DS_Store
+
+# ===== Virtual environment =====
+.venv/
+
+# ===== Documents & reports =====
+*.pdf
+report/
